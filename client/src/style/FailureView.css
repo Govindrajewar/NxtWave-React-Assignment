@@ -1,0 +1,17 @@
+.failure-view {
+  padding-top: 20px;
+}
+
+.failure-view h1 {
+  color: #555;
+}
+
+.retry-btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2596be;
+  color: #fff;
+  cursor: pointer;
+}

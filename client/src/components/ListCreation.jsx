@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../style/ListCreation.css";
+import FailureView from "../components/FailureView";
 
 function ListCreation() {
   const [listData, setListData] = useState([]);
@@ -11,28 +12,27 @@ function ListCreation() {
   const [newList, setNewList] = useState([]);
   const [tempListData, setTempListData] = useState([]);
 
-  useEffect(() => {
-    const fetchAllLists = async () => {
-      setLoading(true);
-      setError(false);
-      try {
-        const response = await axios.get(
-          "https://apis.ccbp.in/list-creation/lists"
-        );
-        setListData(response.data.lists);
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const fetchAllLists = async () => {
+    setLoading(true);
+    setError(false);
+    try {
+      const response = await axios.get(
+        "https://apis.ccbp.in/list-creation/list"
+      );
+      setListData(response.data.lists);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchAllLists();
   }, []);
 
   const handleRetry = () => {
-    setError(false);
-    setLoading(true);
+    fetchAllLists();
   };
 
   const toggleSelectList = (listNumber) => {
@@ -77,10 +77,7 @@ function ListCreation() {
   if (error) {
     return (
       <div className="failure-view">
-        <p>Failed to fetch data. Please try again.</p>
-        <span className="retry-btn" onClick={handleRetry}>
-          Try Again
-        </span>
+        <FailureView handleRetry={handleRetry} />
       </div>
     );
   }
