@@ -2,6 +2,10 @@
   font-family: auto;
   padding: 20px;
   padding-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -18,17 +22,20 @@
   border: none;
   margin-top: 20px;
   margin-bottom: 35px;
+  width: 200px;
+  font-size: 20px;
 }
 
 .lists-wrapper {
   display: flex;
   gap: 20px;
-  justify-content: start;
+  justify-content: center;
 }
 
 .list-column {
   flex: 1;
   max-width: 300px;
+  max-height: 600px;
   background-color: #e9f5ff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -50,6 +57,8 @@
   max-height: 500px;
   overflow-y: auto;
   padding: 0 10px;
+  background-color: #e9f5ff;
+  width: 280px;
 }
 
 .list-item {
@@ -69,4 +78,59 @@
 
 .list-item-description {
   font-size: 14px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 20px;
+}
+
+.update-btn,
+.cancel-btn {
+  height: 50px;
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #2596be;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.cancel-btn {
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #555;
+}
+
+.list-item span {
+  position: relative;
+  right: -200px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.new-list-buttons {
+  position: relative;
+  right: 200px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.lists-wrapper .list-column h3 {
+  text-align: start;
+  margin-left: 15px;
 }
