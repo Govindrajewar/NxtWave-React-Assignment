@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/NxtWave-React-Assignment/static/css/main.c9862f43.css",
+    "main.js": "/NxtWave-React-Assignment/static/js/main.41a777c4.js",
+    "static/js/488.5dc00adb.chunk.js": "/NxtWave-React-Assignment/static/js/488.5dc00adb.chunk.js",
+    "static/media/list-creation-failure.png": "/NxtWave-React-Assignment/static/media/list-creation-failure.b5741f2aa7e3d7945aed.png",
+    "index.html": "/NxtWave-React-Assignment/index.html",
+    "main.c9862f43.css.map": "/NxtWave-React-Assignment/static/css/main.c9862f43.css.map",
+    "main.41a777c4.js.map": "/NxtWave-React-Assignment/static/js/main.41a777c4.js.map",
+    "488.5dc00adb.chunk.js.map": "/NxtWave-React-Assignment/static/js/488.5dc00adb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9862f43.css",
+    "static/js/main.41a777c4.js"
+  ]
+}
