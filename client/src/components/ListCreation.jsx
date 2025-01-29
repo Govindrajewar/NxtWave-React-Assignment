@@ -24,7 +24,9 @@ function ListCreation() {
     } catch (error) {
       setError(true);
     } finally {
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     }
   };
 
@@ -61,15 +63,12 @@ function ListCreation() {
     setToList,
     newListNumber
   ) => {
-    // Update the item's list_number
     const updatedItem = { ...item, list_number: newListNumber };
 
-    // Remove item from the fromList
     setFromList((prevList) =>
       prevList.filter((listItem) => listItem.id !== item.id)
     );
 
-    // Add item to the toList with the updated list_number
     setToList((prevList) => [...prevList, updatedItem]);
   };
 
@@ -88,7 +87,7 @@ function ListCreation() {
   const listNumber2 = listData.filter((list) => list.list_number === 2);
 
   if (loading) {
-    return <div className="loader">Loading...</div>;
+    return <div className="loader"></div>;
   }
 
   if (error) {
