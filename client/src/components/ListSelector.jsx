@@ -9,6 +9,7 @@ function ListSelector({
 }) {
   return (
     <>
+      <h1 className="header">List Creation</h1>
       <h1 className="create-btn" onClick={handleCreateNewList}>
         Create a new list
       </h1>

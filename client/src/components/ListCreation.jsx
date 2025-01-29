@@ -100,7 +100,6 @@ function ListCreation() {
 
   return (
     <div className="list-creation">
-      <h1 className="header">List Creation</h1>
       {!isCreating ? (
         <ListSelector
           handleCreateNewList={handleCreateNewList}
